@@ -1,0 +1,20 @@
+.judul-visimisi{
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.isi-visimisi{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.isi-visimisi p{
+    text-align: center;
+}
+
+.isi-visimisi ul{
+    text-align: justify;
+    margin-left: 10%;
+    margin-right: 10%;
+}

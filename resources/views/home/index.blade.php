@@ -109,23 +109,41 @@
                 </div>
             </div>
         </section>
-
-        <!-- ======= Cta Section ======= -->
-        <section id="cta" class="cta">
-            <div class="container" data-aos="zoom-in">
-
-                <div class="row">
-                    <div class="col-lg-9 text-center text-lg-start">
-                        <h3>Call To Action</h3>
-                        <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    </div>
-                    <div class="col-lg-3 cta-btn-container text-center">
-                        <a class="cta-btn align-middle" href="#">Call To Action</a>
-                    </div>
+        <section id="artikel" class="services section-bg">
+            <div class="container aos-init aos-animate" data-aos="fade-up">
+                <div class="section-title">
+                    <h2>Artikel</h2>
                 </div>
-
+                <div class="row">
+                    @foreach ($artikel_list as $artikel)
+                    <div class="col-xl-3 col-md-6 d-flex align-items-stretch mb-4 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="icon-box">
+                            <div>
+                                <img src="assets/img/{{$artikel->artikel_gambar}}" style="width: 240px; object-fit: contain; margin-bottom: 10px;" class="img-article animated" alt="">
+                            </div>
+                            <div class="isi-article">
+                                <h4 style="text-align: center; width: 100%;"><a href="#">{{$artikel->artikel_judul}}</a></h4>
+                                <p>{{$artikel->artikel_konten}}</p>
+                                <div class="calendar"><a href=""><i class="ri-calendar-fill"></i>
+                                    </a>
+                                    <div class="tanggal-upload">
+                                        <p>Senin,</p>
+                                        <p>{{$artikel->artikel_created_at}}</p>
+                                    </div>
+                                </div>
+                                <div style="position: fixed;  bottom: 20px;">
+                                    <a href="Artikel/IOT.html">Selengkapnya</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    @endforeach
+                </div>
+                <div class="lihat-selengkapnya" style="text-align: center;">
+                    <a href="Artikel.html">Arsip Artikel<i class="bi bi-arrow-right"></i></a>
+                </div>
             </div>
-        </section><!-- End Cta Section -->
+        </section>
 
         <!-- ======= Portfolio Section ======= -->
         <section id="portfolio" class="portfolio">
